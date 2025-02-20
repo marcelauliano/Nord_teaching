@@ -1,0 +1,1 @@
+singularity exec --bind /lustre/:/lustre/ /software/tola/images/hifiasm-0.19.5.sif hifiasm -o hifiasm60again --primary -t 1 gbk.HiFiMapped.bam.filtered.60.fasta
