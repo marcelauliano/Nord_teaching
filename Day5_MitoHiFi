@@ -1,0 +1,2 @@
+marcela@lmj-2022-02:~/bIO5025/mApoSyl1/mitohifi$ sudo docker run ghcr.io/marcelauliano/mitohifi:master findMitoReference.py --species "Apodemus sylvaticus" --outfolder . --min_length 12000
+
