@@ -58,24 +58,48 @@ gfa2fa <prefix>.p_ctg.gfa > <prefix>.p_ctg.fa
 ```
 
 Right. So now, what to do with the assembly file?
-Well, first you should have a look at the statistics for this assembly. Let’s run our asmstats script on it
+Well, first you should have a look at the statistics for this assembly. Let’s run our asmstats script on it:
 
 ```console  
 asmstats <prefix>.p_ctg.fa > <prefix>.p_ctg.fa.stats
 ```
 
 ## WELL DONE!
-You have just done eukaryotic genome assembly using PacBio HiFi reads and two different assemblers! **That is fantastic!**
+You have just done eukaryotic genome assembly using PacBio HiFi with hifiasm! **That is fantastic!**
 
 Again, let's remember you have ran hifiasm only for a subset of reads, which means this is never going to get you a complete assembly. So, for now, keep this results you have and lets look at statistics for an assembly I ran previously with the complete reads dataset.
 
-The files will be on the working data folder (`mApoSyl1_data/`) and will be named `mApoSyl1.hifiasm.total.[a/p]_ctg.fa.gz` (Hifiasm produces two different files, one with suffix `a_ctg.fa.gz` and another one with the suffix `p_ctg.fa.gz`). In your species home directory (`~/<species>/`), create a symlink for those files (with the `ln -s` command) and run `asmstats` on them (e.g. `asmstats <species_id>.hicanu.total.contigs.fasta.gz > <species_id>.hicanu.total.contigs.fasta.stats`). Then answer:
+The files will be on the working data folder (`mApoSyl1_data/`) and will be named `mApoSyl1.hifiasm.total.[a/p]_ctg.fa.gz` (Hifiasm produces two different files, one with suffix `a_ctg.gfa.gz` and another one with the suffix `p_ctg.gfa.gz`, and I have converted them to fasta previously with gfa2fasta). Now, symlink these files to your working directory:
+
+```bash
+pwd
+# where am I? Am I inside the hifiasm folder? If not, run this next command.
+cd ~/a_sylvaticus/hifiasm/
+#then symlink
+
+ln -s path/mApoSyl1.hifiasm.total.p_ctg.fa.gz
+ln -s path/mApoSyl1.hifiasm.total.a_ctg.fa.gz
+
+# and run asmstats in both files
+asmstats mApoSyl1.hifiasm.total.p_ctg.fa.gz > mApoSyl1.hifiasm.total.p_ctg.stats
+asmstats mApoSyl1.hifiasm.total.a_ctg.fa.gz > mApoSyl1.hifiasm.total.a_ctg.stats
+
+```
+
+I have also generated a BUSCO result for ```mApoSyl1.hifiasm.total.p_ctg.fa.gz``` . I want you to copy the result file to your folder. 
+
+```console
+cp path/mApoSyl1.hifiasm.total.p_ctg.busco.short_summary.txt .
+```
+
+
+Ok, now let's look at all the results together and let's answer the following questions:
+
+
+  1-) Hifiasm generates two files (p and a). Why? What do they mean?
+  2-) What are the metrics of the p file, assembly, N50, assembled total bases, number of assembled contigs, largest, smallest. 
   
-  1-) What is the assembled size, number of contigs and N50 for the hicanu assembly? 
-  
-  1a-) Is the Hicanu result close to the estimated genome size? Why?
-  
-  2-) Hifiasm generates two files. Why? What are the assembly metrics for these two files?
+  What are the assembly metrics for these two files?
   
 Now gather all these results, let’s go to the larger group and let’s discuss them together!
 
