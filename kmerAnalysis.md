@@ -12,8 +12,13 @@ a_sylvaticus/assembly/
 The above basically means you have created a folder called ‘a_sylvaticus’ and inside it you have created two other folders side by side called ‘kmers’ and ‘assembly’. Let's go ahead and do it:
 
 ```
+# make a directory called a_sylvaticus
 mkdir a_sylvaticus
+
+# change directory to inside that folder
 cd a_sylvaticus
+
+# make two extra directory called kmers and assembly
 mkdir kmers
 mkdir assembly
 ```
