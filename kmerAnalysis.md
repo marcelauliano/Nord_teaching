@@ -31,7 +31,7 @@ Now let's use the skills we learned yesterday and let's list what files are insi
 ls -ltrh <path_here> 
 ```
 
-Do you files and folders listed? If you do, then copy the mApoSyl1.60.HiFi.fasta file to the `kmers` directory you have created and move back to the `kmers` directory. Like this:
+Do you files and folders listed? If you do, then copy the mApoSyl1.60.HiFi.fasta file to the `kmers` directory you have created and move back to the `kmers` directory. The file mApoSyl1.60.HiFi.fasta is inside a subfolder called 'data'. Like this:
 
 ```
 cp mApoSyl1_data/mApoSyl1.60.HiFi.fasta <Path_to_your_folder>/a_sylvaticus/kmers/
