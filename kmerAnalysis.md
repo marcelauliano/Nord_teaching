@@ -23,16 +23,21 @@ mkdir kmers
 mkdir assembly
 ```
 
-Great, now that you have the folders, you need to copy the working data I pre-prepared for you for *Apodemus sylvaticus*. This data is located at <path_here>.
+Great, now that you have the folders, you need to copy the working data I pre-prepared for *Apodemus sylvaticus*. This data is located at <path_here>.
 
-Now let's use the skill we learned yesterday and let's list what files are inside <path_here> folder. For that you should do:
+Now let's use the skills we learned yesterday and let's list what files are inside <path_here> folder. For that you should do:
 
 ```
 ls -ltrh <path_here> 
 ```
 
+Do you files and folders listed? If you do, then copy the mApoSyl1.60.HiFi.fasta file to the `kmers` directory you have created and move back to the `kmers` directory. Like this:
 
-
+```
+cp mApoSyl1_data/mApoSyl1.60.HiFi.fasta <Path_to_your_folder>/a_sylvaticus/kmers/
+cd <Path_to_your_folder>/a_sylvaticus/kmers/ 
+ls -ltr
+```
 
 
 This data folder also contains some subdirectories, such as the one called kmers, which is where some of the data we need for today is located. You can ```ls -ltrh``` inside that directory as well.
