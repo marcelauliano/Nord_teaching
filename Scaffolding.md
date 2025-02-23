@@ -110,12 +110,4 @@ The explanation of the awk command is:
 * ```END { print "Contigs:", contigs, "\nGaps:", gaps }``` → Prints the final count.
 
 
-
-
-
-
-
-Looking at the final agp file (/home/ubuntu/Share/<species_id>_data/HiC/out.break.salsa/scaffolds_FINAL.agp) (maybe you want to read a little about the AGP format here): what scaffolds were scaffolded with more than one component (a contig of a piece of a contig)? And what scaffolds are unchanged in relation to the contigs?
-How do the Hi-C maps look prior and after scaffolding?
-Do you think you see a sex chromosome on the Hi-C heatmap? If so, point to it in your presentation.
 After that, come back to the wider group.
