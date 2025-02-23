@@ -71,7 +71,7 @@ Again, let's remember you have ran hifiasm only for a subset of reads, which mea
 
 ## Part 2 
 
-As I said, I ran hifiasm for a complete PacBio HiFi dataset for *Apodemus sylvaticus*. In my computer enviroment, it took around xx hours and xx memory and xx cpus. We don't have time to run it here, but you will work with the output of it now.
+As I said, I ran hifiasm for a complete PacBio HiFi dataset for *Apodemus sylvaticus*. In my computer enviroment, it took around 170 hours and 76G memory. We don't have time to run it here, but you will work with the output of it now.
 The files are on the working data folder (`mApoSyl1_data/`) and are named `mApoSyl1.hifiasm.total.[a/p]_ctg.fa.gz` (Hifiasm produces two different files, one with suffix `a_ctg.gfa.gz` and another one with the suffix `p_ctg.gfa.gz`, and I have converted them to fasta previously with gfa2fasta). Now, symlink these files to your working directory:
 
 ```bash
@@ -96,36 +96,26 @@ cp path/mApoSyl1.hifiasm.total.p_ctg.busco.short_summary.txt .
 
 ```
 
-Another thing I want you to do is to look at the assembly graph. 
+Another thing I want you to do is to look at the assembly graph. We discussed this during the lecture, the assembly graph is the organization level just before the flat linear contigs are outputed to the fasta sequence. Have a look at the assembly graph with Bandage (look at this tutorial here if you haven't yet downloaded [Bandage](https://rrwick.github.io/Bandage/). Download the file ```mApoSyl1.p_ctg.noseq.gfa.gz``` and open it on Bandage for a general view.
 
-Ok, so now you have some important outputs to look at as soon as an assembly run is done: you have the general statistics, and you have also (I have done it for you!) produced a BUSCO result to have a look at gene completness in the assembled genome. With this results in hand, let's answer the following questions:
+## VERY GOOD.
 
-  1-) Hifiasm generates two files (p and a). Why? What do they mean?
-  2-) What are the metrics of the p file, assembly, N50, assembled total bases, number of assembled contigs, largest, smallest. 
+Now you have important outputs you should always look at as soon as an assembly run is done: you have the general statistics and you also have a BUSCO result (I have produced it previously) to understand the gene completness in the genome that was just assembled. With these results in hand, let's answer the following questions:
+
+  1-) Hifiasm generates two files (p and a). Why? What do they mean? Have a look at the descriptions [here](https://hifiasm.readthedocs.io/en/latest/trio-assembly.html). 
   
-  What are the assembly metrics for these two files?
+  2-) What are the general statistics for your assembled genome ```mApoSyl1.hifiasm.total.p_ctg.stats```: assembly N50, assembled total bases, number of assembled contigs, largest, smallest...
   
-Now gather all these results, let’s go to the larger group and let’s discuss them together!
+  3-) What is the BUSCO result for the primary assembly?
+  
+  4-) How does the bandage graph look like? 
 
+  # WELL DONE. You just completed the first step of genome assembly!
 
+  Before we go back to the group, let's now have a look at the small dataset results you generated in Part 1.
 
-
-
-
-
-
-
-
-
-
-
-singularity exec --bind /lustre/:/lustre/ /software/tola/images/hifiasm-0.19.5.sif hifiasm -o hifiasm60again --primary -t 1 gbk.HiFiMapped.bam.filtered.60.fasta
-
-blast: done
-
-complete genome for asm stats
-
-purging and merqury:
-
-before perging:
-file for asmstats, 
+  5-) What are the general statistics for the *p_ctg you generated? 
+  6-) How many contigs were created in your hifiasm run with the small dataset?
+  7-) During your run you hifiasm also generated a *p_ctg.noseq.gfa output. Can you download this an open it on Bandage. How does this assembly graph looks like? 
+  
+Now gather all these results and let’s go back to the larger group and discuss it all together!
