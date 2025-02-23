@@ -131,7 +131,7 @@ Now that you have all the results organized, let's interpret them and discuss wi
   
   - show the statistics for the purged and htigs assembly
   - show the busco short summary for the purged assembly
-  - show the spectra plot for the purged assembly (let's use ```mApoSyl1.ccs.purged.spectra-cn.st.png``)
+  - show the spectra plot for the purged assembly (let's use ```mApoSyl1.ccs.purged.spectra-cn.st.png```)
   - show the completeness for the purged assembly
   - show the QV for the purged assembly.
   
