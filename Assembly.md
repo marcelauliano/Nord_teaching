@@ -80,8 +80,8 @@ pwd
 cd ~/a_sylvaticus/hifiasm/
 #then symlink
 
-ln -s path/mApoSyl1.hifiasm.total.p_ctg.fa.gz
-ln -s path/mApoSyl1.hifiasm.total.a_ctg.fa.gz
+ln -s path/assembly/mApoSyl1.hifiasm.total.p_ctg.fa.gz
+ln -s path/assembly/mApoSyl1.hifiasm.total.a_ctg.fa.gz
 
 # and run asmstats in both files
 asmstats mApoSyl1.hifiasm.total.p_ctg.fa.gz > mApoSyl1.hifiasm.total.p_ctg.stats
