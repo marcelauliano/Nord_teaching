@@ -46,6 +46,14 @@ cp path/scaffolding/mApoSyl1.busco.yahs.short_summary.txt .
 # and let's copy the pretext map file for yahs
 cp path/scaffolding/mApoSyl1.yahsa.pretext .
 # For yaHS, let's also copy the agp file output
-
+cp path/scaffolding/mApoSyl1.yahs.agp .
 ```
+
+Now run the general statistics for the scaffolded yaHS assembly
+
+```console
+asmstats mApoSyl1.yahs.fasta.gz > mApoSyl1.yahs.stats
+```
+
+Now I also want you to open the pretext file for salsa and yaHS. Make screeshots of the images and put them in your slides (presentation).
 
