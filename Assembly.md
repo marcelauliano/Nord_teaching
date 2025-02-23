@@ -1,5 +1,5 @@
 # Assembling genomes
-
+## Part 1
 Right, so here we are! Let’s assemble the genome of *Apodemus sylvaticus*. You are going to run the assembler Hifiasm today.
 
 Have a look at Hifiasm's website:
@@ -8,7 +8,7 @@ Have a look at Hifiasm's website:
 
 Now let’s run the assembly on our subsamples.
 
-First, make sure you are in the directory that you created during our first hands-on tutorial (`~/a_sylvaticus/`). Then let’s create a directory the hifiasm run.
+First, make sure you are in the directory that you created during our first hands-on tutorial (`~/a_sylvaticus/`). Then let’s create a directory for the hifiasm run.
 ```console  
 mkdir hifiasm
 ```  
@@ -69,7 +69,10 @@ You have just done eukaryotic genome assembly using PacBio HiFi with hifiasm! **
 
 Again, let's remember you have ran hifiasm only for a subset of reads, which means this is never going to get you a complete assembly. So, for now, keep this results you have and lets look at statistics for an assembly I ran previously with the complete reads dataset.
 
-The files will be on the working data folder (`mApoSyl1_data/`) and will be named `mApoSyl1.hifiasm.total.[a/p]_ctg.fa.gz` (Hifiasm produces two different files, one with suffix `a_ctg.gfa.gz` and another one with the suffix `p_ctg.gfa.gz`, and I have converted them to fasta previously with gfa2fasta). Now, symlink these files to your working directory:
+## Part 2 
+
+As I said, I ran hifiasm for a complete PacBio HiFi dataset for *Apodemus sylvaticus*. In my computer enviroment, it took around xx hours and xx memory and xx cpus. We don't have time to run it here, but you will work with the output of it now.
+The files are on the working data folder (`mApoSyl1_data/`) and are named `mApoSyl1.hifiasm.total.[a/p]_ctg.fa.gz` (Hifiasm produces two different files, one with suffix `a_ctg.gfa.gz` and another one with the suffix `p_ctg.gfa.gz`, and I have converted them to fasta previously with gfa2fasta). Now, symlink these files to your working directory:
 
 ```bash
 pwd
@@ -86,15 +89,17 @@ asmstats mApoSyl1.hifiasm.total.a_ctg.fa.gz > mApoSyl1.hifiasm.total.a_ctg.stats
 
 ```
 
-I have also generated a BUSCO result for ```mApoSyl1.hifiasm.total.p_ctg.fa.gz``` . I want you to copy the result file to your folder. 
+I have also generated BUSCO results for ```mApoSyl1.hifiasm.total.[a/p]_ctg.fa.gz``` . I want you to copy the files to your folder. 
 
 ```console
 cp path/mApoSyl1.hifiasm.total.p_ctg.busco.short_summary.txt .
+cp path/mApoSyl1.hifiasm.total.a_ctg.busco.short_summary.txt .
+
 ```
 
+Another thing I want you to do is to look at the assembly graph. 
 
-Ok, now let's look at all the results together and let's answer the following questions:
-
+Ok, so now you have some important outputs to look at as soon as an assembly run is done: you have the general statistics, and you have also (I have done it for you!) produced a BUSCO result to have a look at gene completness in the assembled genome. With this results in hand, let's answer the following questions:
 
   1-) Hifiasm generates two files (p and a). Why? What do they mean?
   2-) What are the metrics of the p file, assembly, N50, assembled total bases, number of assembled contigs, largest, smallest. 
