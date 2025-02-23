@@ -53,6 +53,7 @@ Those are just some forms of manipulation. I also want you to go to the NCBI ann
 Go into this [page](https://www.ncbi.nlm.nih.gov/refseq/annotation_euk/Apodemus_sylvaticus/GCF_947179515.1-RS_2023_02/)
 
 Answer the questions:
+
 1-) How many genes annotated?
 
 2-) What is the average exon length?
