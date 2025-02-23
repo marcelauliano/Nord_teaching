@@ -89,11 +89,10 @@ asmstats mApoSyl1.hifiasm.total.a_ctg.fa.gz > mApoSyl1.hifiasm.total.a_ctg.stats
 
 ```
 
-I have also generated BUSCO results for ```mApoSyl1.hifiasm.total.[a/p]_ctg.fa.gz``` . I want you to copy the files to your folder. 
+I have also generated BUSCO results for ```mApoSyl1.hifiasm.total.p_ctg.fa.gz``` . I want you to copy the files to your folder. 
 
 ```console
 cp path/mApoSyl1.hifiasm.total.p_ctg.busco.short_summary.txt .
-cp path/mApoSyl1.hifiasm.total.a_ctg.busco.short_summary.txt .
 
 ```
 
