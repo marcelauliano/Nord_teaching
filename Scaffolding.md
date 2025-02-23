@@ -109,5 +109,18 @@ The explanation of the awk command is:
 * else ```if ($5 == "N") gaps++``` → Increments gap count when column 5 is N.
 * ```END { print "Contigs:", contigs, "\nGaps:", gaps }``` → Prints the final count.
 
+Try the same for scaffold_2
 
-After that, come back to the wider group.
+
+```console
+awk '$1 == "scaffold_2" { if ($5 == "W") contigs++; else if ($5 == "N") gaps++ } END { print "Contigs:", contigs, "\nGaps:", gaps }' mApoSyl1.yahs.agp
+```
+Print only ```scaffold_1``` to the screen
+
+```console
+awk '$1 == "scaffold_1" {print}' mApoSyl1.yahs.agp
+```
+
+Those a just a few ways to manipulate your agp file!
+
+Now, let's come back to the wider group.
