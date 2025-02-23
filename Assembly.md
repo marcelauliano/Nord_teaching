@@ -115,7 +115,9 @@ Now you have important outputs you should always look at as soon as an assembly 
   Before we go back to the group, let's now have a look at the small dataset results you generated in Part 1.
 
   5-) What are the general statistics for the *p_ctg you generated? 
+  
   6-) How many contigs were created in your hifiasm run with the small dataset?
+  
   7-) During your run you hifiasm also generated a *p_ctg.noseq.gfa output. Can you download this an open it on Bandage. How does this assembly graph looks like? 
   
 Now gather all these results and let’s go back to the larger group and discuss it all together!
