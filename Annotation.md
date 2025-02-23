@@ -42,6 +42,53 @@ But you can also use a oneliner to inspect this:
 awk -F'product=' '$2 {split($2, a, ";"); products[a[1]]++} END {for (p in products) print p}' mApoSyl1.hspbeta2.gff
 ```
 
+In which chromosome (or scaffold) is this gene predicted?  
+
+```console
+cat hspbeta2.gff | awk '{print $1}' | sort -u
+```
+
+Those are just some forms of manipulation. I also want you to go to the NCBI annotation page and check out what are the general statistics for the complete annotation:
+
+Go into this [page](https://www.ncbi.nlm.nih.gov/refseq/annotation_euk/Apodemus_sylvaticus/GCF_947179515.1-RS_2023_02/)
+Answer the questions?
+1-) How many genes annotated?
+
+2-) What is the average exon length?
+
+3-) How many pseudogenes annotated?
+
+## Nice!
+
+Now, let's say I want to extract only my 2 isoforms of the Beta 2 heat shock protein. How can I do that? 
+You need the IDs of the protein sequences, then you need to extract those sequences from the multifasta file ```GCF_947179515.1_mApoSyl1.1_protein.faa```.
+
+How to get the protein IDs from the gff file:
+
+```console
+awk -F'protein_id=' '$2 {split($2, a, ";"); print a[1]}' mApoSyl1.hspbeta2.gff | sort -u 
+```
+
+Now use one script I have for you to extract those sequences from the multifasta file:
+
+```console
+export PATH=path:$PATH
+python filterfasta.py -i XP_052044335.1,XP_052044336.1 GCF_947179515.1_mApoSyl1.1_protein.faa > beta2.fasta
+```
+
+Cool! Now you have the 2 isoforms in the ```beta2.fasta```. Less it to have a look:
+
+```console
+less beta2.fasta
+```
+
+Let's say you would like to do a phylogeny with these sequences, you would run this analysis several times to gather sequences for this gene for many species, and then later you would run your aligment e phylogeny. Well done, you are not working with whole genome annotations!
+
+After the MitoHiFi tutorial you will manipulate another type of annotation file, the genbank files.
+
+Let's go back to the main group!
+
+
 
 
 
