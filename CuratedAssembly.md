@@ -17,18 +17,22 @@ Look at that? Thats is A LOT! WELL DONE! :clap:
 # Now,
 
 Let's look at the final manually curated assembly. 
-Before you look at the files, I want you to check this publication [here]: 
+Before you look at the files, I want you to check this publication [here](https://wellcomeopenresearch.org/articles/8-442/v1). This is the genome note for the curated assembly you are working on. It is already published (general statistics might vary slighlty with that you have). 
 
-It's time for you and your team to gather all the results and make a final presentation.
+Now, you will manipulate the final statistics for the curated genome and input this to your group's final presentation.
+Let's get the curated genome final statistics:
 
-**I have some extra results for your species**: it's the final curated primary assembly (haplotigs are not curated at the moment). For the curated assembly you have available the following files:
+```console
+cd ~/a_sylvaticus/
+mkdir curated
 
-* The general statistics: `/home/ubuntu/Share/<species_id>_data/HiC/curated/*.curated_primary.fa.stats`  
-  * e.g. for `Urtica urens` that would be: `/home/ubuntu/Share/drUrtUren1_data/HiC/curated/drUrtUren1.curated_primary.fa.stats` 
-* The file to be open with PretextView to see the HiC heatmap: `/home/ubuntu/Share/<species_id>_data/HiC/curated/*.pretext`
-* The BUSCO results: `/home/ubuntu/Share/<species_id>_data/HiC/curated/BUSCO/short_summary.specific..BUSCO.txt`
+# Now let's copy and symlink final curated results to this folder
 
-So you have the curated statistics, a BUSCO run for it and the final curated Hi-C heatmap. So I want you to gather ALL the results for your species and make a final presentation answering all the questions bellow:
+cp path/curated/mApoSyl1.1.primary.stats .
+cp path/curated/mApoSyl1_curated.pretext.gz .
+cp path/curated/mApoSyl1_curated_BUSCO.short-summary.txt
+```
+So now that you have the curated statistics, a BUSCO run for it and the final curated Hi-C heatmap, I want you to gather ALL the results for your species and make a final presentation answering all the questions bellow:
 
      1\. What is the name of your species? And what else have you learned online for it (do a small search to find a picture and maybe some interesting evolutionary facts about it)?
 
@@ -36,7 +40,7 @@ So you have the curated statistics, a BUSCO run for it and the final curated Hi-
 
      3\. How does the reads plot length distribution looks like? What is the average read length that was inputted to assembly?
 
-     4\. What are the statistics for the Hicanu total reads output? What is the merqury qv? The completeness? How does busco looks like?
+     4\. What are the statistics for the Hifiasm total reads primary assembly? What is the merqury qv? The completeness? How does busco looks like?
 
      5\. What are the statistics for the hicanu purged results for primary and haplotigs? What are the qvs? Completeness? How does busco looks like for the primary and haploytigs assembly?
 
