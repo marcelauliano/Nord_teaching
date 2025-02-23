@@ -19,7 +19,7 @@ Look at that? Thats is A LOT! WELL DONE! :clap:
 Let's look at the final manually curated assembly. 
 Before you look at the files, I want you to check this publication [here](https://wellcomeopenresearch.org/articles/8-442/v1). This is the genome note for the curated assembly you are working on. It is already published (general statistics might vary slighlty with that you have). 
 
-Now, you will manipulate the final statistics for the curated genome and input this to your group's final presentation.
+Now, you will manipulate the final statistics for the curated genome and update this on your group's final presentation.
 Let's get the curated genome final statistics:
 
 ```console
@@ -32,35 +32,34 @@ cp path/curated/mApoSyl1.1.primary.stats .
 cp path/curated/mApoSyl1_curated.pretext.gz .
 cp path/curated/mApoSyl1_curated_BUSCO.short-summary.txt
 ```
-So now that you have the curated statistics, a BUSCO run for it and the final curated Hi-C heatmap, I want you to gather ALL the results for your species and make a final presentation answering all the questions bellow:
+So now that you have the curated statistics, a BUSCO run for it and the final curated Hi-C heatmap, I want you to gather ALL the results for your species that you have ran during the week and make a final presentation answering all the questions bellow:
 
      1\. What is the name of your species? And what else have you learned online for it (do a small search to find a picture and maybe some interesting evolutionary facts about it)?
 
-     2\. What is the genomescope plot for the TOTAL Pacbio Hifi reads histogram? What is the expected genome size? What is the expected heterozygosity? What is the estimated repeat content?
+     2\. What is the genomescope plot for the TOTAL Pacbio HiFi reads histogram? What is the expected genome size? What is the expected heterozygosity? What is the estimated repeat content?
 
      3\. How does the reads plot length distribution looks like? What is the average read length that was inputted to assembly?
 
      4\. What are the statistics for the Hifiasm total reads primary assembly? What is the merqury qv? The completeness? How does busco looks like?
 
-     5\. What are the statistics for the hicanu purged results for primary and haplotigs? What are the qvs? Completeness? How does busco looks like for the primary and haploytigs assembly?
+     5\. What are the statistics for the assembly before and after purging? What are the qvs? Completeness? How does busco looks like before and after purging?
 
-Now, let's go to the scaffolding part. One note: in the official Darwin Tree of Life Pipeline, we have ran one round of Illumina polishing after purging the assembly and before running salsa on it. This is why you may find a slightly different number of bases in the statistics of the assembly after purging, and just before salsa.
+     6\. What is the primary genome statistics just before yaHS scaffolding?
 
-     6\. What is the primary genome statistics just before salsa scaffolding? How does the Hi-C heat map looks like?
+     7\. What is the primary genome statistics after yaHS scaffolding? How does the Hi-C heat map looks like?
 
-     7\. What is the primary genome statistics after salsa scaffolding? How does the Hi-C heat map looks like?
+     8\. What is the primary genome statistics after manual curation? How does the Hi-C heat map looks like? 
 
-     8\. What is the primary genome statistics after manual curation? How does the Hi-C heat map looks like? Has BUSCO changed at all?
+     9\. How are the BUSCO results before and after curation? Has it changed much? 
 
      9\. What is the QV diference of the primary genome (i) after purging and (iii) after scaffolding?
 
-     10\. For the subset of reads you have assembled for your species. Which kind of reads were they? What have you assembled there?
+     10\. For the subset of reads you have assembled for your species. Which kind of reads were they? What have you assembled there? What your blast result looks like?
 
    
-
 WELL DONE! 
 
-You have a robust knowlegde and skill set to perform eukaryotic genome assembly using Pacbio HiFi and Hi-C. Looking at kmer profiles and Hi-C heatmaps takes practice and time. So, just keep doing it and you will become more confident with time. 
+You have a robust knowlegde and skill set to perform eukaryotic genome assembly using Pacbio HiFi and Hi-C!!
 
 
 ##########
