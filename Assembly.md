@@ -9,7 +9,8 @@ Have a look at Hifiasm's website:
 Now let’s run the assembly on our subsamples.
 
 First, make sure you are in the directory that you created during our first hands-on tutorial (`~/a_sylvaticus/`). Then let’s create a directory for the hifiasm run.
-```console  
+```console
+cd ~/a_sylvaticus/
 mkdir hifiasm
 ```  
 Make sure the conda environment is activated:
