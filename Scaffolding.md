@@ -1,4 +1,4 @@
-# Chromating conformation capture Hi-C
+# Chromatin Conformation Capture Hi-C
 
 Right, so now you have learned about Chromating conformation capture and scaffolding genomes with the Hi-C technology. Today you are going to evaluate results generated 
 by two scaffolding tools: (i) [SALSA2](https://github.com/marbl/SALSA) and (ii) [YaHS](https://github.com/c-zhou/yahs). 
