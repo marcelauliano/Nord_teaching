@@ -2,7 +2,7 @@
 # Purging and Merqury evaluation
 
 Ok, today you learned about Purge Dups and purging assemblies. You also learned that Hifiasm and other assemblers are not perfect in separating haplotypes of diploid species, 
-and then many times the primary assembly retains haplotigs, and that this redanduncy is not real and must be removed before assemblies are scaffolded. Later, you learned how 
+which can result in the primary assembly retaining haplotigs, and that this redanduncy is not real and must be removed before assemblies are scaffolded. Later, you learned how 
 to evaluate assembly completeness and quality having a look at the shared kmers between the assembly and high-quality reads (eg., as Illumina or PacBio HiFi).
 Now you are going to inspect merqury outputs to evaluate the assembly of *Apodemus sylvaticus* before and after purging. 
 
@@ -74,7 +74,7 @@ Right, now let's copy over the merqury results after purging. Make a folder for 
 mkdir ~/a_sylvaticus/purged/merqury
 cd ~/a_sylvaticus/purged/merqury
 # then copy the busco file for the purged primary assembly
-cp path/mApoSyl1_data/purged/merqury/* . 
+cp /home/marcela/mApoSyl1_data/assembly/purging/merqury_eval_p/* . 
 ```
 ## Good.
 
@@ -112,7 +112,7 @@ All the merqury results are now copied to your working folder. Download the plot
     
   2-) Gather the completeness results for the run. The file ends in `completeness.stats`
   
-  3-) Gather the QV results for the run. The file is called `purged.qv`
+  3-) Gather the QV results for the run. The file ends in `purged.qv`
 
   4-) Gather the BUSCO result for the primary assembly after purging.
 
