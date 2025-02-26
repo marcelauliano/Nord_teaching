@@ -30,20 +30,21 @@ Great, now that you have the folders, you need to copy the working data I pre-pr
 Now let's use the skills you learned yesterday and let's list what files are inside the <path_here> folder. For that you should do:
 
 ```console
-ls -ltrh <path_here> 
+ls -ltrh /home/marcela/mApoSyl1_data
 ```
 
-Do you see files and folders listed? If you do, then copy the file ```the mApoSyl1.60.HiFi.fasta``` to the `kmers` directory you have created and move back to the ```kmers``` directory. The file ```mApoSyl1.60.HiFi.fasta``` is inside a subfolder called ```mApoSyl1_data```. You copy it like this:
+Do you see files and folders listed? If you do, then copy the file ```the mApoSyl1.60.HiFi.fasta``` to the `kmers` directory you have created and move back to the ```kmers``` directory. The file ```mApoSyl1.60.HiFi.fasta``` is inside a subfolder called ```mApoSyl1_data```. As an example, with you are user1, you copy it like this:
 
 ```console
-cp mApoSyl1_data/mApoSyl1.60.HiFi.fasta <Path_to_your_folder>/a_sylvaticus/kmers/
-cd <Path_to_your_folder>/a_sylvaticus/kmers/ 
+cp ~/mApoSyl1_data/mApoSyl1.60.HiFi.fasta /home/user1/a_sylvaticus/kmers/
+cd /home/user1/a_sylvaticus/kmers/ 
 ls -ltr
+# do you see the file mApoSyl1.60.HiFi.fasta ? Great!
 ```
 
 ### Note :grey_exclamation: 
 
-mApoSyl1 is the Darwin Tree of Life Project code for the species *Apodemus sylvaticus*
+**mApoSyl1** is the Darwin Tree of Life Project code for the species *Apodemus sylvaticus*
 
 Now that you have created directories and copied the file to kmers, you need to activate your conda enviroment to be able to run the analyses today.
 You do:
@@ -52,10 +53,10 @@ You do:
 conda activate BIO5025
 ```
 
-Your prompt should now look like:  
+Your prompt should now look something like:  
 
 ```bash  
-(BIO5025) userX@IP-address:working_directory$
+(BIO5025) user1@lmj-2022-02:~/a_sylvaticus/kmers$
 ```
 Now, with the `BIO5025`environment actived, try calling Jellyfish:
 
