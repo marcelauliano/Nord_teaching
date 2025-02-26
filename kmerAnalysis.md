@@ -168,7 +168,7 @@ Save the image of both versions of the plot - normal and log scale - somewhere i
 Cool, you have plotted the kmer distribution of the ```mApoSyl1.all.HiFi.k31.histo``` file, and Genomescope has calculated for your (i) the estimated genome size, (ii) the heterozygosity and (iii) the percentage of repeats of your species genome. 
 
 ## Now
-You have also copied a file called ```mApoSyl1.all.HiFi.stats``` which is the statistics for the total reads I have ran for you. You need this file to understand your dataset and calculate genome sequenced coverage. Another file you have copied is a plot of reads length distribution called mApoSyl1.all.HiFi.plotReadsLength.png. I want you to download this file to your local machine.
+You have also copied a file called ```mApoSyl1.all.HiFi.stats``` which is the statistics for the total reads I have ran for you. You need this file to understand your dataset and calculate genome sequenced coverage. Another file you have copied is a plot of reads length distribution called ```mApoSyl1.all.HiFi.readsLength.png```. I want you to download this file to your local machine.
 
  # Now, let's finish and interprete everything. Answer the following questions:
 
