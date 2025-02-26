@@ -55,7 +55,6 @@ This means you need to convert the graph into a fasta file. For that, we have an
 Add the directory containing that script to the PATH and run it:
 
 ```console 
-export PATH=path:$PATH
 gfa2fa <prefix>.p_ctg.gfa > <prefix>.p_ctg.fa
 ```
 
