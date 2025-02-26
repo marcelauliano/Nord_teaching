@@ -1,7 +1,7 @@
 # BLAST (Basic Local Alignment Search Tool)
 
 You have assembled a partial set of Pacbio HiFi reads for *Apodemus sylvaticus*. 
-Do you think you have just assembled some portions of *Apodemus sylvaticus*. nuclear genome? Or something special? Aren’t you curious? 
+Do you think you have just assembled some portions of *Apodemus sylvaticus* nuclear genome? Or something special? Aren’t you curious? 
 
 Let's do something fun to find out. Let’s do a stand-alone BLAST of our assembled contig.
 
@@ -27,7 +27,7 @@ Right. So now we want to BLAST our contig to find out what it is. This means we 
 So all you have to do is to format this database in the format blast understands and uses it. So you do:
 
 ```console  
-cp path/database.fasta .
+cp /home/marcela/mApoSyl1_data/blastdb/database.fasta .
 makeblastdb -in database.fasta -dbtype nucl
 ```
 
