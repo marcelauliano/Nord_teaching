@@ -25,7 +25,7 @@ mkdir kmers
 mkdir assembly
 ```
 
-Great, now that you have the folders, you need to copy the working data I pre-prepared for *Apodemus sylvaticus*. This data is located at <path_here>.
+Great, now that you have the folders, you need to copy the working data I pre-prepared for *Apodemus sylvaticus*. This data is located at /home/marcela/mApoSyl1_data.
 
 Now let's use the skills you learned yesterday and let's list what files are inside the <path_here> folder. For that you should do:
 
@@ -106,7 +106,14 @@ Note that the input for your command **jellyfish histo** is the output from your
 
 ### Let's plot
 
-Download the file mApoSyl1.60.histo to your local machine (if you need help for that, we have instructions on downloading/uploading files in [this](https://eukaryotic-genome-assembly.github.io/logging_on/) tutorial), go to the [Genomescope](http://genomescope.org/genomescope2.0/) page and upload the file there. You should change the **Description** to the name of your species, and the **kmer** to 31. Then plot.
+Download the file mApoSyl1.60.histo to your local machine (if you need help for that, we have instructions on downloading/uploading files in [this](https://github.com/marcelauliano/Nord_teaching/blob/main/Connecting_downloading.md) tutorial), go to the [Genomescope](http://genomescope.org/genomescope2.0/) page and upload the file there. You should change the **Description** to the name of your species, and the **kmer** to 31. Then plot.
+
+Example of downloading for a user1
+
+```console
+scp user1@52.138.157.130:/home/user1/a_sylvaticus/kmers/mApoSyl1.60.histo .
+```
+
 
 Save the image of both versions of the plot - normal and log scale - somewhere in your computer.
 
@@ -129,7 +136,7 @@ What is the result of that command? How many sequences are there in the file?
 But we can explore further, we can calculate how many DNA bases there are in our read set. I have a script you can run to generate this general statistics:
 
 ```bash
-export PATH=$PATH:/home/ubuntu/Share/scripts/
+export PATH=$PATH:/home/marcela/scripts/
 asmstats mApoSyl1.60.HiFi.fasta > mApoSyl1.60.HiFi.stats
 ```
 
@@ -149,9 +156,9 @@ pwd
 Now copy the files
 
 ```console
-cp pathtofolder/mApoSyl1.all.HiFi.stats . 
-cp pathtofolder/mApoSyl1.all.HiFi.k31.histo . 
-cp pathtofolder/mApoSyl1.all.HiFi.plotReadsLength.png .
+cp /home/marcela/mApoSyl1_data/mApoSyl1.all.HiFi.stats . 
+cp /home/marcela/mApoSyl1_data/mApoSyl1.all.HiFi.k31.histo . 
+cp /home/marcela/mApoSyl1_data/mApoSyl1.all.HiFi.readsLength.png .
 ```
 
 Download the file ```mApoSyl1.all.HiFi.k31.histo``` to your local machine as you did before and go to the [Genomescope](http://genomescope.org/genomescope2.0/) page and upload the file there. You should change the **Description** to the name of your species, and the **kmer** to 31. Then plot.
