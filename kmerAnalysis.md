@@ -36,7 +36,7 @@ ls -ltrh /home/marcela/mApoSyl1_data
 Do you see files and folders listed? If you do, then copy the file ```the mApoSyl1.60.HiFi.fasta``` to the `kmers` directory you have created and move back to the ```kmers``` directory. The file ```mApoSyl1.60.HiFi.fasta``` is inside a subfolder called ```mApoSyl1_data```. As an example, with you are user1, you copy it like this:
 
 ```console
-cp ~/mApoSyl1_data/mApoSyl1.60.HiFi.fasta /home/user1/a_sylvaticus/kmers/
+cp /home/marcela/mApoSyl1_data/mApoSyl1.60.HiFi.fasta /home/user1/a_sylvaticus/kmers/
 cd /home/user1/a_sylvaticus/kmers/ 
 ls -ltr
 # do you see the file mApoSyl1.60.HiFi.fasta ? Great!
