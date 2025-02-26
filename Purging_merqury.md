@@ -12,7 +12,7 @@ generated a merqury run for the assembly coming out of hifiasm. I want you to cr
 The merqury results for hifiasm are here:
 
 ```console
-ls path/assembly/merqury
+ls /home/marcela/mApoSyl1_data/assembly/merqury_eval
 
 # You need to copy those results to your working directory, so perhaps first let's create a subirectory for the merqury results
 cd ~/a_sylvaticus/hifiasm/
@@ -20,7 +20,7 @@ mkdir merqury
 cd merqury
 
 # Now copy all the files there
-cp path/assembly/merqury/* .
+cp /home/marcela/mApoSyl1_data/assembly/merqury_eval/* .
 ```
 
 ## Great.
@@ -39,14 +39,14 @@ I have geneated a purge dups run for you which generates (i) purged assemblies. 
 ```console  
 mkdir ~/a_sylvaticus/purged/
 cd ~/a_sylvaticus/purged/
-ln -s path/mApoSyl1_data/purged/purged.fa.gz
-ln -s path/mApoSyl1_data/purged/purged.htigs.fa.gz
+ln -s /home/marcela/mApoSyl1_data/assembly/purging/purged.fa.gz
+ln -s /home/marcela/mApoSyl1_data/assembly/purging/purged.htigs.fa.gz
 ```  
 Now export our scripts directory and activate our main conda environment:
 
 ```console
-export PATH=$PATH:/home/ubuntu/Share/scripts/
 conda activate BIO5025
+export PATH=$PATH:/home/marcela/scripts/
 ```
 
 And then run the `asmstats` script for each file:
@@ -65,7 +65,7 @@ the assembly tutorial. Now let's gather the BUSCO results for after purging.
 # if you are not there yet, go back to your purging directory
 cd ~/a_sylvaticus/purged/
 # then copy the busco file for the purged primary assembly
-cp path/mApoSyl1_data/purged/purged.busco.short_summary.txt . 
+cp /home/marcela/mApoSyl1_data/assembly/purging/purged.busco.short_summary.txt . 
 ```
 Right, now let's copy over the merqury results after purging. Make a folder for the merqury outputs in your working directory and copy files over.
 
