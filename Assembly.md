@@ -82,8 +82,8 @@ pwd
 cd ~/a_sylvaticus/hifiasm/
 #then symlink
 
-ln -s path/assembly/mApoSyl1.hifiasm.total.p_ctg.fa.gz
-ln -s path/assembly/mApoSyl1.hifiasm.total.a_ctg.fa.gz
+ln -s /home/marcela/mApoSyl1_data/assembly/mApoSyl1.hifiasm.total.p_ctg.fa.gz
+ln -s /home/marcela/mApoSyl1_data/assembly/mApoSyl1.hifiasm.total.a_ctg.fa.gz
 
 # and run asmstats in both files
 asmstats mApoSyl1.hifiasm.total.p_ctg.fa.gz > mApoSyl1.hifiasm.total.p_ctg.stats
@@ -94,7 +94,7 @@ asmstats mApoSyl1.hifiasm.total.a_ctg.fa.gz > mApoSyl1.hifiasm.total.a_ctg.stats
 I have also generated BUSCO results for ```mApoSyl1.hifiasm.total.p_ctg.fa.gz``` . I want you to copy the files to your folder. 
 
 ```console
-cp path/mApoSyl1.hifiasm.total.p_ctg.busco.short_summary.txt .
+cp /home/marcela/mApoSyl1_data/assembly/mApoSyl1.hifiasm.total.p_ctg.busco.short_summary.txt .
 
 ```
 
