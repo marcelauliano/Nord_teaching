@@ -6,7 +6,7 @@ Have a look at Hifiasm's website:
 
 * [Hifiasm github repository](https://github.com/chhylp123/hifiasm)
 
-Now let’s run the assembly on our subsamples.
+Now let’s run the assembly on our subsample.
 
 First, make sure you are in the directory that you created during our first hands-on tutorial (`~/a_sylvaticus/`). Then let’s create a directory for the hifiasm run.
 ```console
@@ -48,11 +48,11 @@ You can do that by either looking at the website or by opening a third tab/windo
 
 Hifiasm outputs different intermediate files together with the final assembly result. 
 
-Among the results hifiasm produces, you will find the `<prefix>.p_ctg.gfa` file (remember that the prefix has been defined using the `-o` option when running Hifiasm, the file name is likely to be mApoSyl1.60.hifiasm.p_ctg.gfa). 
+Among the results hifiasm produces, you will find the `<prefix>.p_ctg.gfa` file (remember that the prefix has been defined using the `-o` option when running Hifiasm, the file name is likely to be ```mApoSyl1.60.hifiasm.p_ctg.gfa```). 
 This is our assembly output file. Hifiasm gives us the [assembly graph](http://gfa-spec.github.io/GFA-spec/GFA1.html) as an output. 
 This means you need to convert the graph into a fasta file. For that, we have an awk script named `gfa2fa`.
 
-Add the directory containing that script to the PATH and run it:
+Run:
 
 ```console 
 gfa2fa <prefix>.p_ctg.gfa > <prefix>.p_ctg.fa
@@ -97,7 +97,14 @@ cp /home/marcela/mApoSyl1_data/assembly/mApoSyl1.hifiasm.total.p_ctg.busco.short
 
 ```
 
-Another thing I want you to do is to look at the assembly graph. We discussed this during the lecture, the assembly graph is the organization level just before the flat linear contigs are outputed to the fasta sequence. Have a look at the assembly graph with Bandage (look at this tutorial here if you haven't yet downloaded [Bandage](https://rrwick.github.io/Bandage/). Download the file ```mApoSyl1.p_ctg.noseq.gfa.gz``` and open it on Bandage for a general view.
+Another thing I want you to do is to look at the assembly graph. We discussed this during the lecture, the assembly graph is the organization level just before the flat linear contigs are outputed as a fasta sequence. Have a look at the assembly graph with [Bandage](https://rrwick.github.io/Bandage/). Download the file ```mApoSyl1.p_ctg.noseq.gfa.gz``` and open it on Bandage for a general view.
+
+```console
+cd ~/a_sylvaticus/hifiasm/
+cp /home/marcela/mApoSyl1_data/assembly/mApoSyl1.p_ctg.noseq.gfa.gz .
+
+#Now download this file to your local machine
+```
 
 ## VERY GOOD.
 
@@ -113,12 +120,12 @@ Now you have important outputs you should always look at as soon as an assembly 
 
   # WELL DONE. You just completed the first step of genome assembly!
 
-  Before we go back to the group, let's now have a look at the small dataset results you generated in Part 1.
+  Before we go back to the group, let's now have a look at the small dataset results you generated in **Part 1**.
 
-  5-) What are the general statistics for the *p_ctg you generated? 
+  5-) What are the general statistics for the *p_ctg (likely ```mApoSyl1.60.hifiasm.p_ctg.fa``` ) you generated? 
   
   6-) How many contigs were created in your hifiasm run with the small dataset?
   
-  7-) During your run you hifiasm also generated a *p_ctg.noseq.gfa output. Can you download this an open it on Bandage. How does this assembly graph looks like? 
+  7-) During your run hifiasm also generated a *p_ctg.noseq.gfa (```mApoSyl1.60.hifiasm.p_ctg.noseq.gfa```) output. Can you download this an open it on Bandage. How does this assembly graph looks like? 
   
 Now gather all these results and let’s go back to the larger group and discuss it all together!
