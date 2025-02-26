@@ -32,6 +32,9 @@ cp /home/marcela/mApoSyl1_data/curated/mApoSyl1.1.primary.stats .
 cp /home/marcela/mApoSyl1_data/curated/mApoSyl1_curated.pretext.gz .
 cp /home/marcela/mApoSyl1_data/curated/mApoSyl1_curated_BUSCO.short-summary.txt .
 ```
+
+Download the curated HeatMap and open it on pretext.
+
 So now that you have the curated statistics, a BUSCO run for it and the final curated Hi-C heatmap, I want you to gather ALL the results for your species that you have ran during the week and make a final presentation answering all the questions bellow:
 
      1\. What is the name of your species? And what else have you learned online for it (do a small search to find a picture and maybe some interesting evolutionary facts about it)?
