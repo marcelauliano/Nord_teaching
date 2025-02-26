@@ -4,7 +4,7 @@ We just discussed annotation and some of the output formats that come out of ann
 
 I have downloaded 2 files from the NCBI for us to work with, but I also encourage you have have a look at their [FTP server](https://ftp.ncbi.nlm.nih.gov/genomes/all/annotation_releases/10129/GCF_947179515.1-RS_2023_02/), other files are available there. 
 
-The main files we are going to look at is a gff file and a fasta file of predicted proteins.
+The main files we are going to look at are a gff file and a fasta file of predicted proteins.
 Make an annotation folder in your work directotry and copy and symlink files there:
 
 ```console
