@@ -7,7 +7,7 @@ Because we don't have time to run the whole command during the course (it can ta
 
 Today you will evaluate the outpus of YAHS and salsa, merqury results and BUSCO results, as well as generate the assembly general statistics for the primary genome after yaHS scaffolding. You will also interprete the agp output result and inspect the HiC heatmap created.
 
-Let's create a folder in your working directory where you will be working on scaffold results:
+Let's create a folder in your working directory where you will be working on the scaffolded results:
 
 ```console
 mkdir ~/a_sylvaticus/scaffolding
@@ -19,18 +19,18 @@ Now let's copy and symlink files from Salsa and yaHS outputs.
 ```console
 # First let's symlink Salsa scaffolded statistics output
 cd ~/a_sylvaticus/scaffolding
-ln -s path/scaffolding/mApoSyl1.salsa.stats .
+ln -s /home/marcela/mApoSyl1_data/scaffolding/mApoSyl1.salsa.stats .
 # let's copy the BUSCO output for salsa
-cp path/scaffolding/mApoSyl1.busco.salsa.short_summary.txt .
+cp /home/marcela/mApoSyl1_data/scaffolding/mApoSyl1.busco.salsa.short_summary.txt .
 # and let's copy the pretext map file for salsa
-cp path/scaffolding/mApoSyl1.salsa.pretext .
+cp /home/marcela/mApoSyl1_data/scaffolding/mApoSyl1.salsa.pretext .
 ```
 
 Now run the script to output the general statistics for the salsa-scaffolded assembly:
 
 ```console
-export PATH=$PATH:/home/ubuntu/Share/scripts
 conda activate BIO5025
+export PATH=$PATH:/home/ubuntu/Share/scripts
 cd ~/a_sylvaticus/scaffolding
 asmstats mApoSyl1.salsa.fasta.gz > mApoSyl1.salsa.stats
 ```
