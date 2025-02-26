@@ -195,6 +195,7 @@ f- Looking at the asmstats result for this smaller file, how much coverage of th
 You can also plot the reads length distribution for this smaller file. Let's do that with a script which will print the distribution to the screen.
 
 ```
+
 python plot-screen.py mApoSyl1.60.HiFi.fasta
 
 ```
