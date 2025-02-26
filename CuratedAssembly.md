@@ -53,9 +53,9 @@ So now that you have the curated statistics, a BUSCO run for it and the final cu
 
      8\. What is the primary genome statistics after manual curation? How does the Hi-C heat map looks like? 
     
-     9\. How are the BUSCO results before and after curation? Has it changed much? 
+     9. How are the BUSCO results before and after curation? Has it changed much? 
     
-     10\. What is the QV diference of the primary genome (i) after purging and (iii) after scaffolding? 
+     10. What is the QV diference of the primary genome (i) after purging and (iii) after scaffolding? 
 
      11\. For the subset of reads you have assembled for your species. Which kind of reads were they? What have you assembled there? What your blast result looks like?
 
