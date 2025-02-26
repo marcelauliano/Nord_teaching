@@ -23,12 +23,13 @@ Let’s change to the hifiasm folder and create a symlink to the subsample datas
 
 ```console  
 cd ~/a_sylvaticus/hifiasm/
-ln -s path/mApoSyl1.60.HiFi.fasta
+ln -s /home/marcela/mApoSyl1_data/mApoSyl1.60.HiFi.fasta
 ```
 
 Now let’s call hifiasm and have a look at the parameters it prints:
 
-```console  
+```console
+export PATH=$PATH:/home/marcela/scripts
 hifiasm
 ```
 
