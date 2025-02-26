@@ -11,8 +11,8 @@ Make an annotation folder in your work directotry and copy and symlink files the
 cd ~/a_sylvaticus/
 mkdir annotation
 cd annotation
-cp path/annotation/GCF_947179515.1_mApoSyl1.1_genomic.gff .
-cp path/annotation/GCF_947179515.1_mApoSyl1.1_protein.faa .
+cp /home/marcela/mApoSyl1_data/annotation/GCF_947179515.1_mApoSyl1.1_genomic.gff .
+cp  /home/marcela/mApoSyl1_data/annotation/GCF_947179515.1_mApoSyl1.1_protein.faa .
 ```
 Cool, now let's da a quick manipulation of these files just to get a sense of them. 
 Let's say I want to understand how many genes of "Heat shock protein beta 2" there are annotated in this genome. What do I do? I can have a quick look at the gff file.
@@ -45,10 +45,12 @@ awk -F'product=' '$2 {split($2, a, ";"); products[a[1]]++} END {for (p in produc
 In which chromosome (or scaffold) is this gene predicted?  
 
 ```console
-cat hspbeta2.gff | awk '{print $1}' | sort -u
+cat mApoSyl1.hspbeta2.gff | awk '{print $1}' | sort -u
 ```
 
-Those are just some forms of manipulation. I also want you to go to the NCBI annotation page and check out what are the general statistics for the complete annotation:
+Those are just some ways of manipulating files. 
+## Now
+I also want you to go to the NCBI annotation page and check out what are the general statistics for the complete annotation:
 
 Go into this [page](https://www.ncbi.nlm.nih.gov/refseq/annotation_euk/Apodemus_sylvaticus/GCF_947179515.1-RS_2023_02/)
 
@@ -62,7 +64,7 @@ Answer the questions:
 
 ## Nice!
 
-Now, let's say I want to extract only my 2 isoforms of the Beta 2 heat shock protein. How can I do that? 
+Now, let's say I want to extract only my 2 isoforms of the Beta 2 heat shock protein from the file with all predicted proteins. How can I do that? 
 You need the IDs of the protein sequences, then you need to extract those sequences from the multifasta file ```GCF_947179515.1_mApoSyl1.1_protein.faa```.
 
 How to get the protein IDs from the gff file:
@@ -71,10 +73,13 @@ How to get the protein IDs from the gff file:
 awk -F'protein_id=' '$2 {split($2, a, ";"); print a[1]}' mApoSyl1.hspbeta2.gff | sort -u 
 ```
 
+Or you can just open the file with ```less``` and check the ID under ```protein_id=``` . Awk is just one way!
+
 Now use one script I have for you to extract those sequences from the multifasta file:
 
 ```console
-export PATH=path:$PATH
+conda activate BIO5025
+ln -s /home/marcela/scripts/filterfasta.py
 python filterfasta.py -i XP_052044335.1,XP_052044336.1 GCF_947179515.1_mApoSyl1.1_protein.faa > beta2.fasta
 ```
 
