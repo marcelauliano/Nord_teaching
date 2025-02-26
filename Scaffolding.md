@@ -26,42 +26,35 @@ cp /home/marcela/mApoSyl1_data/scaffolding/mApoSyl1.busco.salsa.short_summary.tx
 cp /home/marcela/mApoSyl1_data/scaffolding/mApoSyl1.salsa.pretext .
 ```
 
-Now run the script to output the general statistics for the salsa-scaffolded assembly:
-
-```console
-conda activate BIO5025
-export PATH=$PATH:/home/ubuntu/Share/scripts
-cd ~/a_sylvaticus/scaffolding
-asmstats mApoSyl1.salsa.fasta.gz > mApoSyl1.salsa.stats
-```
-
 Great, so now let's gather all the results for the yaHS-scaffolded assembly:
 
 ```console
 # First let's symlink yaHS scaffolded output
 cd ~/a_sylvaticus/scaffolding
-ln -s path/scaffolding/mApoSyl1.yahs.fasta.gz .
+ln -s /home/marcela/mApoSyl1_data/scaffolding/mApoSyl1.yahs.fasta.gz .
 
 # let's copy the BUSCO output for yaHS
-cp path/scaffolding/mApoSyl1.busco.yahs.short_summary.txt .
+cp /home/marcela/mApoSyl1_data/scaffolding/mApoSyl1.busco.yahs.short_summary.txt .
 
 # and let's copy the pretext map file for yahs
-cp path/scaffolding/mApoSyl1.yahsa.pretext .
+cp /home/marcela/mApoSyl1_data/scaffolding/mApoSyl1.yahs.pretext .
 
 # For yaHS, let's also copy the agp file output
-cp path/scaffolding/mApoSyl1.yahs.agp .
+cp /home/marcela/mApoSyl1_data/scaffolding/mApoSyl1.yahs.agp .
 ```
 
 Now run the general statistics for the scaffolded yaHS assembly
 
 ```console
+conda activate BIO5025
+export PATH=$PATH:/home/marcela/scripts/
 asmstats mApoSyl1.yahs.fasta.gz > mApoSyl1.yahs.stats
 ```
 
 Now I also want you to open the pretext file for salsa and yaHS. Make screeshots of the images and put them in your slides (presentation).
 
 Using PretextView
-After opening PretextView, click on the Load Map button and then select the downloaded *.pretext file.
+After opening PretextView, click on the Load Map button and then select the downloaded *.pretext file. If you have any questions, call Laure!
 
 ### Now
 Analyze all the results, discuss with your team and answer the questions in your presentation:
