@@ -5,7 +5,7 @@ by two scaffolding tools: (i) [SALSA2](https://github.com/marbl/SALSA) and (ii) 
 
 Because we don't have time to run the whole command during the course (it can take days), I have generated both results for you for our species *Apodemus sylvaticus*. 
 
-Today you will evaluate the outpus of YAHS and salsa, merqury results and BUSCO results, as well as generate the assemnbly general statistics for the primary genome after yaHS scaffolding. You will also interprete the agp output result and inspect the HiC heatmap created.
+Today you will evaluate the outpus of YAHS and salsa, merqury results and BUSCO results, as well as generate the assembly general statistics for the primary genome after yaHS scaffolding. You will also interprete the agp output result and inspect the HiC heatmap created.
 
 Let's create a folder in your working directory where you will be working on scaffold results:
 
@@ -17,9 +17,9 @@ cd ~/a_sylvaticus/scaffolding
 Now let's copy and symlink files from Salsa and yaHS outputs.
 
 ```console
-# First let's symlink Salsa scaffolded output
+# First let's symlink Salsa scaffolded statistics output
 cd ~/a_sylvaticus/scaffolding
-ln -s path/scaffolding/mApoSyl1.salsa.fasta.gz .
+ln -s path/scaffolding/mApoSyl1.salsa.stats .
 # let's copy the BUSCO output for salsa
 cp path/scaffolding/mApoSyl1.busco.salsa.short_summary.txt .
 # and let's copy the pretext map file for salsa
