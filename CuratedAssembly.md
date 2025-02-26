@@ -10,14 +10,14 @@ iii) You have learned about purging genomes to exclude retained haplotypes
 
 iv) You have learned how to evaluate genome quality with (i) kmers (Merqury, (ii) general statistics and (iii) BUSCO
 
-v) You have learned how interprete Hi-C scaffolding with Salsa and yaHS
+v) You have learned how to interprete Hi-C scaffolding with Salsa and yaHS
 
 Look at that? Thats is A LOT! WELL DONE! :clap: 
 
 # Now,
 
 Let's look at the final manually curated assembly. 
-Before you look at the files, I want you to check this publication [here](https://wellcomeopenresearch.org/articles/8-442/v1). This is the genome note for the curated assembly you are working on. It is already published (general statistics might vary slighlty with that you have). 
+Before you look at the files, I want you to check this publication [here](https://wellcomeopenresearch.org/articles/8-442/v1). This is the genome note for the curated assembly you are working on. It is already published (general statistics might vary slighlty with the one you have). 
 
 Now, you will manipulate the final statistics for the curated genome and update this on your group's final presentation.
 Let's get the curated genome final statistics:
@@ -28,9 +28,9 @@ mkdir curated
 
 # Now let's copy and symlink final curated results to this folder
 
-cp path/curated/mApoSyl1.1.primary.stats .
-cp path/curated/mApoSyl1_curated.pretext.gz .
-cp path/curated/mApoSyl1_curated_BUSCO.short-summary.txt
+cp /home/marcela/mApoSyl1_data/curated/mApoSyl1.1.primary.stats .
+cp /home/marcela/mApoSyl1_data/curated/mApoSyl1_curated.pretext.gz .
+cp /home/marcela/mApoSyl1_data/curated/mApoSyl1_curated_BUSCO.short-summary.txt .
 ```
 So now that you have the curated statistics, a BUSCO run for it and the final curated Hi-C heatmap, I want you to gather ALL the results for your species that you have ran during the week and make a final presentation answering all the questions bellow:
 
