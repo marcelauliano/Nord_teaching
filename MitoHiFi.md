@@ -1,11 +1,11 @@
 # MitoHiFi - Background
 Ok, so on the second day of our course you have assembled the mitogenome of your species with Hifiasm.
-Well, the contigs are the mitochondria, but they don't represent a final mitochondrial sequences we usually find on databases, right? 
+Well, the contig is the mitochondria, but they don't represent a final mitochondrial sequence we usually find on databases, right? 
 The contig size outputed by Hifiasm if much larger than a mitogenome usually is. True! This happens because of the circular nature of the molecule, 
-and because of how assemblers work! Basically: the overlaps of the circular molecule makes the assembler confused and they end up concatenating 
-the circular molecule multiple times, so you end up having an assembly with a repetion in both ends.
+and because of how assemblers work. Basically: the overlaps of the circular molecule makes the assembler confused and they end up concatenating 
+the circular molecule multiple times, so you end up having an assembly with a repetion in both "ends". I write "ends" because the mitochondria don't really have an end, the genome is cirular.
 
-To solve this problem, I have written a pipeline that can assemble and annotation a mitochondrial genome for you! It's called MitoHiFi as you heard on the lecture.
+To solve this problem, I have written a pipeline that can assemble and annotate a mitochondrial genome for you! It's called MitoHiFi as you heard on the lecture.
 For more information on MitoHifi, have a look here: https://github.com/marcelauliano/MitoHiFi 
 
 Now, let's run MitoHiFi for our assembled Hifiasm contig from day 2. We will use a docker container for this run.
@@ -30,13 +30,13 @@ To run MitoHiFi, first you need a close-related mitochondria in fasta and genban
 Let's find a close-related mitochondria for our run:
 
 ```console
-sudo docker run -v $(pwd):/output ghcr.io/marcelauliano/mitohifi:master findMitoReference.py --species "Apodemus sylvaticus" --outfolder . --min_length 12000
+singularity exec -B $(pwd):/output /home/marcela/mitohifi.sif findMitoReference.py --species "Apodemus sylvaticus" --outfolder . --min_length 12000
 ```
 
 Finally, run MitoHiFi for the contigs test dataset: 
 
 ```console  
-python mitohifi.py -c test.fa -f refData/OQ830676.1.fasta -g refData/OQ830676.1.gb -t 1 -o 5
+singularity exec -B $(pwd):/output /home/marcela/mitohifi.sif mitohifi.py -c mApoSyl1.60.hifiasm.p_ctg.fa -f NC_049122.1.fasta -g NC_049122.1.gb -t 1 -o 2
 ```
 
 The pipeline will probably take a few minutes to run. Once it's done, it will output a message saying `Pipeline finished!`.
