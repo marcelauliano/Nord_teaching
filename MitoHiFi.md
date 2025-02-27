@@ -21,7 +21,7 @@ cd mitochondria
 Now let's copy or symlink your hifiasm contig from Day 2 to ourt folder
 
 ```console
-cp path/hifiasm/<prefix>.p_ctg.fa .
+cp ~/a_sylvaticus/hifiasm/<prefix>.p_ctg.fa .
 ```
 
 ## Finding a related mitogenome  
