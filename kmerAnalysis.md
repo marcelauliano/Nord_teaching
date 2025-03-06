@@ -37,7 +37,7 @@ Do you see files and folders listed? If you do, then copy the file ```the mApoSy
 
 ```console
 cp /home/marcela/mApoSyl1_data/mApoSyl1.60.HiFi.fasta /home/user1/a_sylvaticus/kmers/
-cd /home/user1/a_sylvaticus/kmers/ 
+cd /home/<your_user_name_here>/a_sylvaticus/kmers/ 
 ls -ltr
 # do you see the file mApoSyl1.60.HiFi.fasta ? Great!
 ```
