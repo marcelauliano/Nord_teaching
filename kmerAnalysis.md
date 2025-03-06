@@ -27,7 +27,7 @@ mkdir assembly
 
 Great, now that you have the folders, you need to copy the working data I pre-prepared for *Apodemus sylvaticus*. This data is located at /home/marcela/mApoSyl1_data.
 
-Now let's use the skills you learned yesterday and let's list what files are inside the <path_here> folder. For that you should do:
+Now let's use the skills you learned yesterday and let's list what files are inside the ```mApoSyl1_data``` folder. For that you should do:
 
 ```console
 ls -ltrh /home/marcela/mApoSyl1_data
