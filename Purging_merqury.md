@@ -73,7 +73,7 @@ Right, now let's copy over the merqury results after purging. Make a folder for 
 # if you are not there yet, go back to your purging directory
 mkdir ~/a_sylvaticus/purged/merqury
 cd ~/a_sylvaticus/purged/merqury
-# then copy the busco file for the purged primary assembly
+# then copy the merqury files for the purged primary assembly
 cp /home/marcela/mApoSyl1_data/assembly/purging/merqury_eval_p/* . 
 ```
 ## Good.
