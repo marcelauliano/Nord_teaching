@@ -57,9 +57,10 @@ So now that you have the curated statistics, a BUSCO run for it and the final cu
     
      10. What is the QV diference of the primary genome (i) after purging ?
      
-     10.1 Based on the genome note publication of your https://wellcomeopenresearch.org/articles/8-442/v1)  what is the final QV of this assembly? 
+     11. Based on the genome note publication of your https://wellcomeopenresearch.org/articles/8-442/v1 what is the 
+     final QV of this assembly? Final published values might vary slighly in relation to the datasets you are working with.  
 
-     11\. For the subset of reads you have assembled for your species. Which kind of reads were they? What have you assembled there? What your blast result looks like?
+     12\. For the subset of reads you have assembled for your species. Which kind of reads were they? What have you assembled there? What your blast result looks like?
 
    
 WELL DONE! 
