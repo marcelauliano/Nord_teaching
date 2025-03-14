@@ -13,6 +13,8 @@ mkdir annotation
 cd annotation
 cp /home/marcela/mApoSyl1_data/annotation/GCF_947179515.1_mApoSyl1.1_genomic.gff.gz .
 cp  /home/marcela/mApoSyl1_data/annotation/GCF_947179515.1_mApoSyl1.1_protein.faa.gz .
+gunzip GCF_947179515.1_mApoSyl1.1_genomic.gff.gz
+gunzip GCF_947179515.1_mApoSyl1.1_protein.faa.gz
 ```
 Cool, now let's da a quick manipulation of these files just to get a sense of them. 
 Let's say I want to understand how many genes of "Heat shock protein beta 2" there are annotated in this genome. What do I do? I can have a quick look at the gff file.
