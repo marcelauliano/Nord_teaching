@@ -11,7 +11,7 @@ Make an annotation folder in your work directotry and copy and symlink files the
 cd ~/a_sylvaticus/
 mkdir annotation
 cd annotation
-cp /home/marcela/mApoSyl1_data/annotation/GCF_947179515.1_mApoSyl1.1_genomic.gff .
+cp /home/marcela/mApoSyl1_data/annotation/GCF_947179515.1_mApoSyl1.1_genomic.gff.gz .
 cp  /home/marcela/mApoSyl1_data/annotation/GCF_947179515.1_mApoSyl1.1_protein.faa.gz .
 ```
 Cool, now let's da a quick manipulation of these files just to get a sense of them. 
