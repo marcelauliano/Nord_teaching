@@ -1,6 +1,6 @@
 # Linux
 
-We just learned a bunch of Linux command together. Now I'll give you time to play with some of these commands by yourself.
+We just learned a bunch of Linux commands together. Now I'll give you time to play with some of these commands by yourself.
 
 I have a file in our server that you will need for this next exercise. This is the whole path to the file:
 
