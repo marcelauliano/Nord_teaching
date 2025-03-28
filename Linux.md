@@ -5,7 +5,7 @@ We just learned a bunch of Linux commands together. Now I'll give you time to pl
 I have a file in our server that you will need for this next exercise. This is the whole path to the file:
 
 ```console
-/home/marcela/linux/protein.fa
+/home/marcela/linux/protein.fasta
 ```
 
 For your free time playing with Linux, I want you to:
