@@ -14,11 +14,11 @@ For your free time playing with Linux, I want you to:
 
 2-) Inside this folder, create another folder called ```test_symlink```
 
-3-) Copy the file ```proteins.fasta``` to the folder ```protein_manipulation```
+3-) Copy the file ```protein.fa``` to the folder ```protein_manipulation```
 
-4-) Symlink the file ```proteins.fasta``` to the folder ```test_symlink```
+4-) Symlink the file ```protein.fa``` to the folder ```test_symlink```
 
-5-) Tell me: is ```proteins.fasta``` made of fasta or fastq sequences?
+5-) Tell me: is ```protein.fa``` made of fasta or fastq sequences?
 
 6-) Count how many sequences there are in the file.
 
