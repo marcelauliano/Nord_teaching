@@ -110,7 +110,7 @@ cp /home/marcela/mApoSyl1_data/assembly/mApoSyl1.p_ctg.noseq.gfa.gz .
 
 Now you have important outputs you should always look at as soon as an assembly run is done: you have the general statistics and you also have a BUSCO result (I have produced it previously) to understand the gene completness in the genome that was just assembled. With these results in hand, let's answer the following questions:
 
-  1-) Hifiasm generates two files (p and a). Why? What do they mean? Have a look at the descriptions [here]([https://hifiasm.readthedocs.io/en/latest/trio-assembly.html](https://hifiasm.readthedocs.io/en/latest/interpreting-output.html#interpreting-output). 
+  1-) Hifiasm generates two files (p and a). Why? What do they mean? Have a look at the descriptions [here](https://hifiasm.readthedocs.io/en/latest/interpreting-output.html#interpreting-output). 
   
   2-) What are the general statistics for your assembled genome ```mApoSyl1.hifiasm.total.p_ctg.stats```: assembly N50, assembled total bases, number of assembled contigs, largest, smallest...
   
